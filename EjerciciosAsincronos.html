@@ -6,28 +6,24 @@ de realizar un examen de suficiencia para aprobar.///
 
 public class Notas {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         Scanner teclado = new Scanner(System.in);
         double nota1;
         System.out.print("Ingrese nota del alumno:");
         nota1 = teclado.nextDouble();
-        if (nota1 >= 7d) {
+        if (nota1>=7d && nota1<=10d) {
             System.out.print("Aprobado");
         } else {
-            if (nota1 >= 6.99d) {
+            if (nota1>=6.50d && nota1<=6.99d) {
                 System.out.print("Puede realizar examen de recuperacion");
-            } else {
-                if (nota1 >= 6.50d) {
-                    System.out.print("Puede realizar examen de recuperacion");
-                } else {
-                    if (nota1 <= 6.49d) {
+            }  else {
+                    if (nota1>=0d && nota1<=6.49 ) {
                         System.out.print("Reprobado");
                     }
                 }
             }
         }
     }
-}
 ///Comentario: A la hora de digitar decimales se necesita usar coma en ves de punto
-no se porque, tambien no pude hacer buen uso de los operadores relacionales. Este 
-ejercicio lo estuve trabajando el dia de ayer.///
+no se porque. Este ejercicio lo estuve trabajando el dia de ayer.///
+                                    
