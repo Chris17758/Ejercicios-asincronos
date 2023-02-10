@@ -1,0 +1,33 @@
+///1. Al ingresar la nota de un alumno, se desea saber si este aprobó o no una materia 
+en el colegio. Para aprobar se necesita una nota mayor o igual a 7.0. Diseñe una 
+aplicación en Java que al ingresar la nota muestre con un mensaje en el cual indique si
+el alumno aprobó o no. Además, si la nota está entre 6.50 y 6.99, tiene la posibilidad 
+de realizar un examen de suficiencia para aprobar.///
+
+public class Notas {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double nota1;
+        System.out.print("Ingrese nota del alumno:");
+        nota1 = teclado.nextDouble();
+        if (nota1 >= 7d) {
+            System.out.print("Aprobado");
+        } else {
+            if (nota1 >= 6.99d) {
+                System.out.print("Puede realizar examen de recuperacion");
+            } else {
+                if (nota1 >= 6.50d) {
+                    System.out.print("Puede realizar examen de recuperacion");
+                } else {
+                    if (nota1 <= 6.49d) {
+                        System.out.print("Reprobado");
+                    }
+                }
+            }
+        }
+    }
+}
+///Comentario: A la hora de digitar decimales se necesita usar coma en ves de punto
+no se porque, tambien no pude hacer buen uso de los operadores relacionales. Este 
+ejercicio lo estuve trabajando el dia de ayer.///
